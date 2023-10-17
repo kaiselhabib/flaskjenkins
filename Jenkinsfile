@@ -16,11 +16,6 @@ pipeline {
             }
         }
 
-        stage ("Clone repo"){
-            steps {
-                sh "git clone https://github.com/IkramElhabib/jenkinsTp2.git"
-            }
-        }
 
         stage('Build Docker Image') {
             steps {
