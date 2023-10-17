@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     // Build the Docker image within the workspace directory
-                    sh 'docker build -t firstspring .'
+                    sh 'docker build -t jenkinsflask .'
                 }
             
         }
@@ -24,7 +24,7 @@ pipeline {
                 
                 script {
                     // Run the Flask app in a Docker container within the workspace directory
-                    sh 'docker run -d -p 5000:5000 firstspring'
+                    sh 'docker run -d -p 5000:5000 jenkinsflask'
                 }
             
             }
