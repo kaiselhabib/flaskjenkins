@@ -10,23 +10,23 @@ pipeline {
         }
 
         stage('Build Docker Image') {
-            steps { dir("flaskjenkins"){
+            steps {
                 script {
                     // Build the Docker image within the workspace directory
                     sh 'docker build -t firstspring .'
                 }
-            }
+            
         }
         }
 
         stage('Run Docker Container') {
             steps {
-                dir("flaskjenkins"){
+                
                 script {
                     // Run the Flask app in a Docker container within the workspace directory
                     sh 'docker run -d -p 8080:8080 firstspring'
                 }
-            }
+            
             }
         }
     }
