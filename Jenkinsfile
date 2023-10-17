@@ -2,10 +2,23 @@ pipeline {
     agent any
 
     stages {
+        
+        stage ("Clean up"){
+            steps {
+                deleteDir()
+            }
+        }
+        
         stage('Pull Repository') {
             steps {
                 // Pull the repository source code from Git into the workspace
                 git branch: 'main', url: 'https://github.com/Ibrahimkarray/flaskjenkins.git'
+            }
+        }
+
+        stage ("Clone repo"){
+            steps {
+                sh "git clone https://github.com/IkramElhabib/jenkinsTp2.git"
             }
         }
 
