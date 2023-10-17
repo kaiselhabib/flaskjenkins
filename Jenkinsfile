@@ -24,7 +24,7 @@ pipeline {
                 
                 script {
                     // Run the Flask app in a Docker container within the workspace directory
-                    sh 'docker run -d -p 8080:8080 firstspring'
+                    sh 'docker run -d -p 5001:5001 firstspring'
                 }
             
             }
