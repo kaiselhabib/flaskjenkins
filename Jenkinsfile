@@ -36,7 +36,7 @@ pipeline {
             // Clean up - remove the Docker image locally (if necessary)
             script {
                 // Optional: Remove the Docker image locally after the pipeline completes
-                sh 'docker rmi firstspring'
+                sh 'docker rmi jenkinsflask'
             }
         }
     }
